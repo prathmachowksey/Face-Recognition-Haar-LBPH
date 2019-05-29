@@ -7,7 +7,7 @@ def face_detection(imagepath):
 
 	# Convert color image to grayscale for Viola-Jones
 	grayscale_image = cv.cvtColor(original_image, cv.COLOR_BGR2GRAY)
-	face_cascade = cv.CascadeClassifier('./haarcascade_frontalface_alt.xml')
+	face_cascade = cv.CascadeClassifier('./opencvfiles/haarcascade_frontalface_alt.xml')
 
 	detected_faces_coordinates = face_cascade.detectMultiScale(grayscale_image,scaleFactor=1.3,minNeighbors=5,minSize=(30, 30))
 
